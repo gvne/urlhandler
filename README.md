@@ -5,19 +5,11 @@ A step by step example of how to create a URL handler in python on Mac OS.
 URL handler are most useful in protocols that send response through a redirect
 URI such as `OAuth2`.
 
-## App from AppleScript
-
-Mac OS natively allows creating an URL handler for Applications. To use that
-tool we need to make an Application. The easiest way of doing so it to use
-`AppleScript`.  
-Open the `Script Editor.app` application. Load the `src/urlhandler.scpt` script
-and export it as an application.  
-
 ## Quick Start
 
-##### Make an application out of the src/urlhandler.scpt script
-Open the script with the Script Editor application and export it as an
-Application
+##### Make an application
+Open the `src/urlhandler.scpt` script with the Script Editor application and
+export it as an Application in a local folder.
 
 ##### Package the script
 Run the package script:
@@ -28,12 +20,13 @@ Copy the exported application to the Application folder
 
 ##### Set the script to be executed on url call
 ```bash
-defaults write com.gvne.urlhandler Script /path/to/my/script.py
+defaults write com.gvne.urlhandler Script /path/to/this/folder/src/script.py
 ```
 
 ##### Test it !
 In Safari type the url `gvne://something`. Your script got executed with the url
-as first arg !
+as first arg !  
+You can check the output by doing `cat /tmp/write_args_script.log`
 
 ## Development steps
 

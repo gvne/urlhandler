@@ -1,0 +1,11 @@
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLName</key>
+        <string>URLHandler</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>gvne</string>
+        </array>
+      </dict>
+    </array>
